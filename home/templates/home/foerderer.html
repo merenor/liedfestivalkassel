@@ -1,0 +1,83 @@
+{% block kuenstler %}
+{% load static %}
+
+<!-- Container (Sponsoren Section) -->
+<div id="sponsoren" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Förderer und Sponsoren</h3>
+    <p>Unser Dank für die freundliche Unterstützung geht an:</p>
+    <div class="list-group">
+      <div class="list-group-item">Hessisches Ministerium für Wissenschaft und Kunst</div>
+      <div class="list-group-item">Kassel - documenta-Stadt</div>
+      <div class="list-group-item">Hübner GmbH</div>
+      <div class="list-group-item">Von Waitzische Beteiligungen</div>
+      <div class="list-group-item">Herrn Dr. Ulrich Etscheit</div>
+      <div class="list-group-item">Herrn Oliver Goldenbow und Frau Cordula Ströher-Goldenbow</div>
+      <div class="list-group-item">B. Braun Melsungen</p></div>
+      <div class="list-group-item">Gemeinschaftspraxis Lehmann und Lehmann, Schauenburg</div>
+      <div class="list-group-item">Pianohaus Doppelstein</div>
+      <div class="list-group-item">Evangelische Philippus-Kirchengemeinde Kassel</div>
+      <div class="list-group-item">Musikakademie der Stadt Kassel »Louis Spohr«</div>
+    </div>
+  </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="traudl" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Traudl Schmaderer</h4>
+        </div>
+        <div class="modal-body">
+          <p>Traudl Schmaderer ist als Konzert-, Oratoriums- und Liedsängerin bekannt und trat in den letzten Jahren mit anspruchsvollen und zugleich meisterhaft interpretierten Konzertprojekten hervor, so unter anderem beim Musikfest Kassel mit dem Zyklus La Bonne Chanson von Gabriel Faure und dem Buch der hängenden Gärten von Arnold Schönberg und bei den Kasseler Musiktagen mit  Ich, Hiob von Thomas Daniel Schlee.</p>
+          <p>Ihre Gesangsausbildung erhielt sie in München bei Adalbert Kraus und Nurit Herzog-Gorén und im Rahmen von Meisterkursen bei Edith Mathis. Sie wirkte bei Uraufführungen zeitgenössischer Musik, bei zahlreichen Rundfunk- und CD-Einspielungen mit und tritt regelmäßig in vielen Orten Deutschlands auf. Neben ihrem umfangreichen Konzertrepertoire widmet sie sich zurzeit verstärkt der Kammermusik, gibt Liederabende und konzertiert mit verschiedenen Kammermusikensembles. Seit Langem ist sie als Gesangspädagogin tätig, zunächst an der Staatlichen Hochschule für Musik Frankfurt/Main und seit einigen Jahren auch in Kassel.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Schließen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+{% endblock %}

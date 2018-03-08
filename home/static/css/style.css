@@ -1,0 +1,214 @@
+body {
+    font: 16px/1.75 'Open Sans', sans-serif;
+    color: #222;
+    background-color: #fffffa;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+h3, h4, h5 {
+  font-family: 'Gentium Book Basic', serif;
+  color: #8B0000;
+}
+h3 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+h4 {
+    margin: 10px 0 15px 0;
+    letter-spacing: 1px;
+    font-size: 25px
+}
+h5 {
+  padding-top: 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+#kuenstlerliste {
+  padding-top: 20px;
+}
+.instrument !important {
+  padding: 5px 0 0 0;
+  margin: 0;
+}
+/*@media (max-width: 600px) {
+  .container {
+    padding: 80px 5%;
+  }
+}*/
+.container {
+  padding: 80px 10%;
+}
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+}
+.person:hover {
+    border-color: #f1f1f1;
+}
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+.tion h3 {
+    color: #fff !important;
+}
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.2)
+}
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+
+@media (max-width: 1000px) {
+  .carousel-inner {
+    padding-top: 50px;
+  }
+}
+
+.bg-1 {
+    background: #8b0000;
+    color: #fffffa;
+}
+.bg-1 h3 {
+    color: #fffffa;
+}
+.bg-1 h4 {
+    background: #fffffa;
+    color: #8b0000;
+}
+/*.bg-1 p {font-style: italic;}*/
+.list-group-item {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background: #fffffa;
+    color: #8b0000;
+}
+/*.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}*/
+.thumbnail {
+    background-color: #8b0000;
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail p {
+    margin-top: 15px;
+    color: #fffffa;
+}
+.thumbnail h5 {
+    color: #fffffa;
+}
+.sponsor {
+  min-height: 230px;
+  padding: 30px;
+  background: #fffffa;
+  color: #8b0000;
+  -moz-hyphens: none;
+  -o-hyphens: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+.btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+.modal-header, .close {
+    background-color: #8b0000;
+    color: #fffffa !important;
+    text-align: center;
+    font-size: 30px;
+    -moz-hyphens: none;
+    -o-hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+.modal-header, .modal-body {
+    padding: 30px 20px;
+}
+.modal-body {
+  color: #222;
+}
+.nav-tabs li a {
+    color: #777;
+}
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+    background-color: #8b0000;
+    border: 0;
+    font-size: 13px !important;
+    letter-spacing: 2px;
+    /* opacity: 0.9; */
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fffffa !important;
+}
+.navbar-brand {
+  font-family: 'Gentium Book Basic', serif !important;
+}
+.navbar-nav li a:hover {
+    color: #fffffa !important;
+}
+.navbar-nav li.active a {
+    color: #fffffa !important;
+    background-color: #29292c !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+.open .dropdown-toggle {
+    color: #fffffa;
+    background-color: #555 !important;
+}
+.dropdown-menu li a {
+    color: #000 !important;
+}
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+}
+footer a {
+    color: #f5f5f5;
+}
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+.form-control {
+    border-radius: 0;
+}
+textarea {
+    resize: none;
+}

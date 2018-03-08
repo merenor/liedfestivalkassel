@@ -1,0 +1,112 @@
+{% block kuenstler %}
+{% load static %}
+
+<!-- Container (Künstler Section) -->
+<div id="kuenstler">
+  <div class="container">
+    <h3 class="text-center">Künstler</h3>
+    <p>Das <strong>piano.voce.ensemble</strong> besteht aus drei Sänger/innen und zwei Pianisten, die schon oft miteinander in unterschiedlichen Konzerten aufgetreten sind – sei es am Kasseler Staatstheater oder auch auf internationalen Konzertpodien. Neu an der Kooperation im Rahmen des Liedfestivals Kassel ist die kammermusikalische Ausrichtung des 2015 gegründeten Ensembles, welche die Grenzen eines Liederabends im herkömmlichen Sinne hinter sich lässt.</p>
+    <p>Die Künstlerinnen und Künstler vereint eine große Liebe zum Liedgesang, die den Wunsch reifen ließ, sowohl die großen Liedzyklen wie etwa die Winterreise von Franz Schubert oder die Dichterliebe und den Liederkreis von Robert Schumann neu zu hören und gemeinsam aufzuführen, als auch sich den oft zu Unrecht vernachlässigten Duetten, Terzetten und Quartetten der Klassik und Romantik zu widmen.</p>
+
+    <div class="row text-center" id="kuenstlerliste">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="{% static 'img/schmaderer_traudl2_4x3.jpg' %}" alt="Maren Engelhardt" width="400" height="300">
+          <h5>Traudl Schmaderer</h5>
+          <p class="instrument">Sopran</p>
+          <button class="btn" data-toggle="modal" data-target="#traudl">Biografie</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="{% static 'img/engelhardt_maren_4x3.jpg' %}" alt="Maren Engelhardt" width="400" height="300">
+          <h5>Maren Engelhardt</h5>
+          <p class="instrument">Mezzosopran</p>
+          <button class="btn" data-toggle="modal" data-target="#maren">Biografie</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="{% static 'img/holzhauser_daniel_4x3.jpg' %}" alt="Daniel Holzhauser" width="400" height="300">
+          <h5>Daniel Holzhauser</h5>
+          <p class="instrument">Bariton</p>
+          <button class="btn" data-toggle="modal" data-target="#daniel">Biografie</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="{% static 'img/bertino_alberto_4x3.jpg' %}" alt="Alberto Bertino" width="400" height="300">
+          <h5>Alberto Bertino</h5>
+          <p class="instrument">Klavier</p>
+          <button class="btn" data-toggle="modal" data-target="#alberto">Biografie</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="{% static 'img/kravtchin_michael_4x3.jpg' %}" alt="Michael Kravtchin" width="400" height="300">
+          <h5>Michael Kravtchin</h5>
+          <p class="instrument">Klavier</p>
+          <button class="btn" data-toggle="modal" data-target="#michael">Biografie</button>
+        </div>
+      </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="traudl" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Traudl Schmaderer</h4>
+        </div>
+        <div class="modal-body">
+          <p>Traudl Schmaderer ist als Konzert-, Oratoriums- und Liedsängerin bekannt und trat in den letzten Jahren mit anspruchsvollen und zugleich meisterhaft interpretierten Konzertprojekten hervor, so unter anderem beim Musikfest Kassel mit dem Zyklus La Bonne Chanson von Gabriel Faure und dem Buch der hängenden Gärten von Arnold Schönberg und bei den Kasseler Musiktagen mit  Ich, Hiob von Thomas Daniel Schlee.</p>
+          <p>Ihre Gesangsausbildung erhielt sie in München bei Adalbert Kraus und Nurit Herzog-Gorén und im Rahmen von Meisterkursen bei Edith Mathis. Sie wirkte bei Uraufführungen zeitgenössischer Musik, bei zahlreichen Rundfunk- und CD-Einspielungen mit und tritt regelmäßig in vielen Orten Deutschlands auf. Neben ihrem umfangreichen Konzertrepertoire widmet sie sich zurzeit verstärkt der Kammermusik, gibt Liederabende und konzertiert mit verschiedenen Kammermusikensembles. Seit Langem ist sie als Gesangspädagogin tätig, zunächst an der Staatlichen Hochschule für Musik Frankfurt/Main und seit einigen Jahren auch in Kassel.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Schließen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock %}
