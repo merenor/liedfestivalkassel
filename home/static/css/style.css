@@ -161,7 +161,10 @@ em {
     hyphens: none;
 }
 .modal-header, .modal-body {
-    padding: 30px 20px;
+    padding: 30px 30px;
+}
+.modal-header h4 {
+    color: #fffffa;
 }
 .modal-body {
   color: #222;
