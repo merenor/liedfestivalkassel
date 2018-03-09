@@ -1,0 +1,62 @@
+{% block konzerte %}
+
+<!-- Container (Workshop Section) -->
+<div id="workshop" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Workshop</h3>
+    <h4 class="text-center">9.&ndash;10. Juni 2018</h4>
+    <p>Ein öffentlicher Workshop bietet die Möglichkeit, mit Mitgliedern des <strong>piano.voce.ensembles</strong> zu arbeiten.</p>
+    <p>Zielgruppe des Workshops sind Musikstudenten, begabte Schüler und fortgeschrittene Laien. Die Teilnehmer werden von den Pianisten des <strong>piano.voce.ensembles</strong> begleitet, können aber auch eigene Begleiter mitbringen.</p>
+
+    <h4 style="padding-top: 16px;">Zeitlicher Rahmen</h4>
+    <ul>
+      <li>Am Samstag, den 9. Juni starten um 9.30 Uhr die Unterrichtsstunden in der Musikschule Baunatal.</li>
+      <li>Am 10. Juni wird der Unterricht fortgesetzt, um 17 Uhr wird eine Generalprobe für das Teilnehmerkonzert stattfinden.
+      <li>Das Teilnehmerkonzert findet ab 18 Uhr im Saal der Musikschule Baunatal statt.</li>
+    </ul>
+    <p>Letzter Anmeldetermin ist der 31. Mai 2018.
+    Gültig wird die Anmeldung nur mit bis zum 31. Mai erfolgter Überweisung der Kursgebühr von 50 € pro Teilnehmer.</p>
+    <h4 style="padding-top: 16px;">Kursgebühr</h4>
+    <ul style="padding-bottom: 15px;">
+      <li>50 € pro Teilnehmer</li>
+      <li>Ermäßigung für Schüler und Studenten: 40 €</li>
+    </ul>
+    <button class="btn">Anmeldung zum Workshop</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="test" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

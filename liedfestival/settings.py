@@ -92,7 +92,6 @@ DATABASES = {
         'USER': 'liedfestivalkass',
         'PASSWORD': 'Malönchen!',
         'HOST': 'localhost',
-        'PORT': '5432',
     }
 }
 

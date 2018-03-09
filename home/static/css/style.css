@@ -23,16 +23,25 @@ h4 {
     font-size: 25px
 }
 h5 {
-  padding-top: 20px;
-  font-size: 20px;
-  letter-spacing: 1px;
+    padding-top: 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+em {
+    font-family: 'Gentium Book Basic', serif;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 #kuenstlerliste {
-  padding-top: 20px;
+    padding-top: 20px;
+}
+.red {
+    color: #8b0000;
 }
 .instrument !important {
-  padding: 5px 0 0 0;
-  margin: 0;
+    padding: 5px 0 0 0;
+    margin: 0;
 }
 /*@media (max-width: 600px) {
   .container {
@@ -55,6 +64,9 @@ h5 {
 .carousel-inner img {
     width: 100%; /* Set width to 100% */
     margin: auto;
+}
+.carousel-inner h3 {
+    color: #fffffa;
 }
 .tion h3 {
     color: #fff !important;
@@ -82,15 +94,19 @@ h5 {
     color: #fffffa;
 }
 .bg-1 h4 {
-    background: #fffffa;
-    color: #8b0000;
+    background: #8b0000;
+    color: #fffffa;
+}
+.list-group-item h4 {
+  background: #fffffa;
+  color: #8b0000;
 }
 /*.bg-1 p {font-style: italic;}*/
 .list-group-item {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     background: #fffffa;
-    color: #8b0000;
+    color: #222;
 }
 /*.list-group-item:last-child {
     border-bottom-right-radius: 0;
@@ -192,7 +208,7 @@ h5 {
     color: #000 !important;
 }
 .dropdown-menu li a:hover {
-    background-color: red !important;
+    background-color: #8b0000 !important;
 }
 footer {
     background-color: #2d2d30;
@@ -211,4 +227,8 @@ footer a:hover {
 }
 textarea {
     resize: none;
+}
+/* Weiterlesen */
+#morecontent {
+    display: none;
 }
