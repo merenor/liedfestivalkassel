@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': 'liedfestivalkass$liedfestivalkass',
         'USER': 'liedfestivalkass',
         'PASSWORD': 'Malönchen!',
-        'HOST': 'localhost',
+        'HOST': 'liedfestivalkassel.mysql.pythonanywhere-services.com',
     }
 }
 
