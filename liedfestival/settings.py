@@ -25,7 +25,7 @@ SECRET_KEY = 'ko3v!)5md0e44939@q_iva#7e4d%3#ah!-4r$!!xt6^79$$v^R'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['liedfestival.pythonanywhere.com', 'localhost', '192.168.2.108']
+ALLOWED_HOSTS = ['liedfestivalkassel.pythonanywhere.com', 'localhost', '192.168.2.108']
 
 
 # Application definition
