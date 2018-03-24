@@ -3,6 +3,7 @@ from .choices import *
 
 # Create your models here.
 class Artist(models.Model):
+    rang = models.PositiveIntegerField(default=0)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     instrument = models.CharField(max_length=50, default='')
