@@ -1,0 +1,7 @@
+Sehr geehrte/r {{ anrede }} {{ last_name }},
+
+vielen Dank für Ihre Kartenvorbestellung für das Liedfestival Kassel.
+
+Mit freundlichen Grüßen
+Michael Kravtchin
+- piano.voce.ensemble / Liedfestival Kassel -

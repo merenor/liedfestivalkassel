@@ -1,13 +1,16 @@
-{% block kuenstler %}
+{% block foerderer %}
 {% load static %}
 
 <!-- Container (Sponsoren Section) -->
-<div id="sponsoren" class="bg-1">
+<div id="foerderer" class="bg-1">
   <div class="container">
     <h3 class="text-center">Förderer und Sponsoren</h3>
-    <p>Unser Dank für die freundliche Unterstützung geht an:</p>
+    <p class="text-center" style="margin-bottom: 20px;">Unser Dank für die freundliche Unterstützung geht an:</p>
     <div class="list-group">
-      <div class="list-group-item">Hessisches Ministerium für Wissenschaft und Kunst</div>
+    {% for sponsor in sponsors %}
+      <div class="list-group-item">{{ sponsor.name }}</div>
+    {% endfor %}
+<!--      <div class="list-group-item">Hessisches Ministerium für Wissenschaft und Kunst</div>
       <div class="list-group-item">Kassel - documenta-Stadt</div>
       <div class="list-group-item">Hübner GmbH</div>
       <div class="list-group-item">Von Waitzische Beteiligungen</div>
@@ -19,6 +22,7 @@
       <div class="list-group-item">Evangelische Philippus-Kirchengemeinde Kassel</div>
       <div class="list-group-item">Musikakademie der Stadt Kassel »Louis Spohr«</div>
     </div>
+-->
   </div>
 </div>
 

@@ -1,0 +1,33 @@
+{% include 'home/header.html' %}
+
+{% include 'home/navbar-simple.html' %}
+
+<div class="container">
+    <h3>Liedfestival Kassel 2018</h3>
+    <h4>Kartenvorbestellung</h4>
+
+    {% if order_okay %}
+    <p>Vielen Dank für Ihre Kartenbestellung!</p>
+    <p><a href="/">Zurück zur Hauptseite</a></p>
+    {% endif %}
+
+    {% if form %}
+    <p>Wir freuen uns über Ihr Interesse an den Konzerten im Rahmen des Liedfestivals Kassel.
+      Zur Kartenvorbestellung bitten wir Sie, nachfolgendes Formular auszufüllen. Nach einem Klick auf
+      "Karten bestellen" erhalten Sie eine umgehend eine Reservierungsbestätigung per E-Mail. Darüber hinaus
+      setzen wir uns persönlich mit Ihnen in Verbindung.</p>
+    <p>&nbsp;</p>
+    <div class="list-group">
+      <div class="list-group-item">
+        <form method="POST" class="post-form">{% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-margin-top">Karten bestellen</button>
+        </form>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+
+{% include 'home/footer.html' %}

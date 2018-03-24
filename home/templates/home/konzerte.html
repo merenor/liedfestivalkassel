@@ -6,7 +6,15 @@
     <h3 class="text-center">Konzerte</h3>
     <!--<p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>-->
     <div class="list-group">
-      <div class="list-group-item">
+    {% for concert in concerts %}
+    <div class="list-group-item">
+      <p class="red" style="padding-bottom: 5px;">{{ concert.performance_date|date:"l, j. F Y, H"}} Uhr<br />Haus der Kirche, Kassel</p>
+      <h4 class="bg-1">»{{ concert.title }}«</h3>
+      <p>{{ concert.subtitle }}</p>
+      <p>{{ concert.text }}</p>
+    </div>
+    {% endfor %}
+<!--      <div class="list-group-item">
         <p class="red" style="padding-bottom: 5px;">Dienstag, 12. Juni 2018, 20 Uhr<br />Haus der Kirche, Kassel</p>
         <h4 class="bg-1">»Schwanengesang«</h3>
         <p>Franz Schubert D 957</p>
@@ -23,10 +31,10 @@
         <h4 class="bg-1">»Quartett im Konzert«</h3>
         <p>Johannes Brahms: Zigeunerlieder op. 103 und op. 112</p>
         <p>Im abschließenden Ensemblekonzert steht das musikalische Schwergewicht Johannes Brahmes mit seinen mitreißenden »Zigeunerliedern« für vier Sänger und zwei Pianisten im Zentrum. Duette und Quartette von Haydn, Schubert und Fanny Hensel korrespondieren mit Brahms' schwungvollen Melodien. Es singt und spielt das piano.voce.ensemble.</p>
-      </div>
+      </div>-->
     </div>
-    <button class="btn">Karten vorbestellen</button>
-  </div>
+    <button class="btn" name="Karten vorbestellen" onclick="location.href='karten/';">Karten vorbestellen</button>
+</div>
 <!--
     <ul class="list-group">
       <li class="list-group-item">September <span class="label label-danger">Sold Out!</span></li>

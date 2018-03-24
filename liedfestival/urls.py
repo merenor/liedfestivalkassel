@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
 from django.views.generic import TemplateView
 from home import views
@@ -23,6 +25,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', auth_views.login),
     path('logout/', auth_views.logout),
+    path('motto/', views.letmesee, {'tag': 'motto'}),
+    path('künstler/', views.letmesee, {'tag': 'kuenstler'}),
+    path('konzerte/', views.letmesee, {'tag': 'konzerte'}),
+    path('workshop/', views.letmesee, {'tag': 'workshop'}),
+    path('förderer/', views.letmesee, {'tag': 'foerderer'}),
+    path('sponsoren/', views.letmesee, {'tag': 'foerderer'}),
+    path('karten/', views.karten),
     #path('', TemplateView.as_view(template_name="home/base.html"))
     path('', views.index),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

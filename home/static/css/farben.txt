@@ -1,0 +1,21 @@
+Triade ffbf00
+
+#ffbf00
+#ffe240
+#5b00ff
+#903d99
+#ba14cc
+
+#fff9e6
+#664d00
+#78347f
+
+dunkelgelb
+hellgelb
+lila
+dunkelviolett
+hellviolett
+
+weißgelb
+"schwarz"
+sehrdunkelviolett

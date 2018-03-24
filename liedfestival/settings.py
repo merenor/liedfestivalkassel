@@ -11,19 +11,46 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import json
+
+###########################
+DEBUG = True
+###########################
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+with open(BASE_DIR + "/.mysettings", "r") as j:
+    mysettings = json.load(j)
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ko3v!)5md0e44939@q_iva#7e4d%3#ah!-4r$!!xt6^79$$v^R'
+if 'SECRET_KEY' in mysettings:
+    SECRET_KEY = mysettings['SECRET_KEY']
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+if 'EMAIL_BACKEND' in mysettings:
+    EMAIL_BACKEND = mysettings['EMAIL_BACKEND']
+
+if 'EMAIL_HOST' in mysettings:
+    EMAIL_HOST = mysettings['EMAIL_HOST']
+
+if 'EMAIL_HOST_USER' in mysettings:
+    EMAIL_HOST_USER = mysettings['EMAIL_HOST_USER']
+
+if 'EMAIL_HOST_PASSWORD' in mysettings:
+    EMAIL_HOST_PASSWORD = mysettings['EMAIL_HOST_PASSWORD']
+
+if 'EMAIL_PORT' in mysettings:
+    EMAIL_POST = mysettings['EMAIL_PORT']
+
+if 'EMAIL_USE_TLS' in mysettings:
+    EMAIL_USE_TLS = mysettings['EMAIL_USE_TLS']
+
 
 ALLOWED_HOSTS = ['liedfestivalkassel.pythonanywhere.com', 'localhost', '192.168.2.108']
 
@@ -74,25 +101,19 @@ WSGI_APPLICATION = 'liedfestival.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+DB_PREFIX = 'DB_LOCAL_'
+
+if mysettings['ENVIRONMENT']:
+    DB_PREFIX = 'DB_' + mysettings['ENVIRONMENT'].upper() + '_'
+
 DATABASES = {
-    'postgres': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'liedfestival',
-        'USER': 'liedfestival',
-        'PASSWORD': 'PianoVoce3ns3mbl3',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    },
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'liedfestivalkass$liedfestivalkass',
-        'USER': 'liedfestivalkass',
-        'PASSWORD': 'Malönchen!',
-        'HOST': 'liedfestivalkassel.mysql.pythonanywhere-services.com',
-    }
+        'ENGINE': mysettings[DB_PREFIX + 'ENGINE'],
+        'HOST': mysettings[DB_PREFIX + 'HOST'],
+        'NAME': mysettings[DB_PREFIX + 'NAME'],
+        'USER': mysettings[DB_PREFIX + 'USER'],
+        'PASSWORD': mysettings[DB_PREFIX + 'PASSWORD'],
+    },
 }
 
 
@@ -134,3 +155,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+# Media root
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'home/static/media')
