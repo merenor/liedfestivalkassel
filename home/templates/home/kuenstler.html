@@ -12,7 +12,7 @@
     {% for artist in artists %}
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="{{ artist.picture.url }}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="400" height="300">
+          <img src="{{ artist.picture.url }}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="400">
           <h5>{{ artist.first_name }} {{ artist.last_name }}</h5>
           <p class="instrument">{{ artist.instrument }}</p>
           <button class="btn" data-toggle="modal" data-target="#{{ artist.pk }}">Biografie</button>
