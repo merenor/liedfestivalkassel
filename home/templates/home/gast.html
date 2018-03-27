@@ -1,0 +1,13 @@
+{% block kuenstler %}
+{% load static %}
+
+<!-- Container (Gast Section) -->
+<div id="Gast">
+  <div class="container">
+    <h3 class="text-center">Als Gast</h3>
+    <h4 class="text-center">{{ gast.name }}</h4>
+    <div class="gast-bild"><img src="{{ gast.picture.url }}" width="400px" /></div>
+    <div>{{ gast.bio|safe }}</div>
+  </div>
+</div>
+{% endblock %}

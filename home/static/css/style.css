@@ -250,3 +250,7 @@ textarea {
 .post-form label {
     width: 165px;
 }
+.gast-bild {
+  float: right;
+  padding: 0 0 15px 15px;
+}

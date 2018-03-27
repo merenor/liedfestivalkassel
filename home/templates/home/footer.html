@@ -5,8 +5,42 @@
   </a><br><br>
   <p>Liedfestival Kassel 2018</p>
   <p>Veranstalter: piano.voce.ensemble in Kooperation mit dem Konzertverein Kassel</p>
-  <p>Impressum | Kontakt | Disclaimer</p>
+  <p><a href="#" data-toggle="modal" data-target="#impressum" />Impressum</a> | <a href="mailto:{{ footer.contact }}" />Kontakt</a> | <a href="#" data-toggle="modal" data-target="#disclaimer" />Disclaimer</a></p>
 </footer>
+
+<!-- Modal -->
+
+<div class="modal fade" id="impressum" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Impressum</h4>
+      </div>
+      <div class="modal-body">{{ footer.impressum|safe }}</div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Schließen
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="disclaimer" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Disclaimer</h4>
+      </div>
+      <div class="modal-body">{{ footer.disclaimer|safe }}</div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Schließen
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 $(document).ready(function(){

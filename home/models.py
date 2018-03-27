@@ -16,6 +16,16 @@ class Artist(models.Model):
         return '{} {}'.format(self.first_name, self.last_name)
 
 
+class Gast(models.Model):
+    name = models.CharField(max_length=50, default='')
+    bio = models.TextField()
+    picture = models.ImageField(upload_to='img/artists/')
+    photo_credit = models.CharField(max_length=100, default='')
+
+    def __str__(self):
+        return self.name
+
+
 class TicketReservation(models.Model):
     anrede = models.IntegerField(choices=ANREDE_CHOICES, default=1)
     titel = models.CharField(max_length=15, default='')
@@ -59,6 +69,7 @@ class Sponsor(models.Model):
     def __str__(self):
         return self.name
 
+
 class Concert(models.Model):
     performance_date = models.DateTimeField()
     location = models.CharField(max_length=50, default='')
@@ -68,3 +79,9 @@ class Concert(models.Model):
 
     def __str__(self):
         return '{} - {}'.format(self.performance_date, self.title)
+
+
+class Footer(models.Model):
+    impressum = models.TextField()
+    contact = models.EmailField()
+    disclaimer = models.TextField()

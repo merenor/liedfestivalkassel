@@ -8,7 +8,7 @@ from django.utils import timezone
 
 from django.template import Context, Template
 
-from .models import Artist, MailTemplate, Sponsor, Concert
+from .models import Artist, MailTemplate, Sponsor, Concert, Gast, Footer
 from .forms import TicketReservationForm
 
 
@@ -17,8 +17,10 @@ from .forms import TicketReservationForm
 @login_required(login_url='/login/')
 def index(request):
     artists = Artist.objects.all()
+    gast = Gast.objects.filter()[:1].get()
     concerts = Concert.objects.order_by("performance_date")
     sponsors = Sponsor.objects.order_by("rang")
+    footer = Footer.objects.filter()[:1].get()
 
     return render(
         request,
@@ -26,7 +28,9 @@ def index(request):
         {
             'concerts': concerts,
             'artists': artists,
+            'gast': gast,
             'sponsors': sponsors,
+            'footer': footer,
         }
     )
 
