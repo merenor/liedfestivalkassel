@@ -54,7 +54,7 @@ def karten(request):
             res = send_mail(
                 temp.subject,
                 t.render(c),
-                "f.werthschulte@gmail.com",
+                "account@werthschulte.info",
                 [reservation.email]
             )
 

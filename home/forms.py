@@ -6,6 +6,9 @@ class TicketReservationForm(forms.ModelForm):
 
     class Meta:
         model = TicketReservation
+
+        titel = forms.CharField(required=False)
+
         fields = ('anrede',
             'titel',
             'first_name',

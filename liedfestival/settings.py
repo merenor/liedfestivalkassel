@@ -36,6 +36,8 @@ if 'SECRET_KEY' in mysettings:
 if 'EMAIL_BACKEND' in mysettings:
     EMAIL_BACKEND = mysettings['EMAIL_BACKEND']
 
+###
+
 if 'EMAIL_HOST' in mysettings:
     EMAIL_HOST = mysettings['EMAIL_HOST']
 
@@ -51,6 +53,15 @@ if 'EMAIL_PORT' in mysettings:
 if 'EMAIL_USE_TLS' in mysettings:
     EMAIL_USE_TLS = mysettings['EMAIL_USE_TLS']
 
+####
+
+if "MAILJET_API_KEY" in mysettings:
+    MAILJET_API_KEY = mysettings['MAILJET_API_KEY']
+
+if "MAILJET_API_SECRET" in mysettings:
+    MAILJET_API_SECRET = mysettings['MAILJET_API_SECRET']
+
+####
 
 ALLOWED_HOSTS = ['liedfestivalkassel.pythonanywhere.com', 'localhost', '192.168.2.108']
 
