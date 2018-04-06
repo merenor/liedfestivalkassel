@@ -67,3 +67,7 @@ def karten(request):
         form = TicketReservationForm()
 
     return render(request, 'home/karten.html', {'form': form})
+
+
+def favicon(request):
+    return redirect('/static/img/favicon.ico')

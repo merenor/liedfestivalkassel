@@ -1,3 +1,9 @@
+/*
+$lila_hell: #6d2f73;
+$lila_dunkel: #652c6d;
+$lila_text: #682c6d;
+$lila_footer: #110712;
+*/
 body {
   font: 16px/1.75 'Open Sans', sans-serif;
   color: #664d00;
@@ -10,7 +16,7 @@ body {
 
 h3, h4, h5 {
   font-family: 'Gentium Book Basic', serif;
-  color: #6d2f73;
+  color: #71325A;
   font-weight: 500; }
 
 h3 {
@@ -38,7 +44,7 @@ em {
   padding-top: 20px; }
 
 .red {
-  color: #6d2f73; }
+  color: #71325A; }
 
 .instrument {
   padding: 5px 0 0 0;
@@ -86,19 +92,19 @@ em {
 
 .bg-1 {
   background: #ffbf00;
-  color: #682c6d; }
+  color: #6a2f54; }
 
 .bg-1 h3 {
   font-size: 33px;
-  color: #652c6d; }
+  color: #6a2f54; }
 
 .bg-1 h4 {
   background: #ffbf00;
-  color: #6d2f73; }
+  color: #71325A; }
 
 .list-group-item h4 {
   background: #fff9e6;
-  color: #6d2f73; }
+  color: #71325A; }
 
 /*.bg-1 p {font-style: italic;}*/
 .list-group-item {
@@ -120,10 +126,10 @@ em {
 .thumbnail p {
   margin-top: 5px;
   margin-bottom: 25px;
-  color: #6d2f73; }
+  color: #71325A; }
 
 .thumbnail h5 {
-  color: #6d2f73;
+  color: #71325A;
   font-weight: 500; }
 
 .sponsor {
@@ -139,7 +145,7 @@ em {
 
 .btn {
   padding: 10px 20px;
-  background-color: #652c6d;
+  background-color: #6a2f54;
   color: #fff9e6;
   border-radius: 0;
   transition: .2s; }
@@ -154,7 +160,7 @@ em {
 
 .modal-header, .close {
   background-color: #ffbf00;
-  color: #6d2f73;
+  color: #71325A;
   font-weight: 500;
   text-align: center;
   -moz-hyphens: none;
@@ -167,7 +173,7 @@ em {
   padding: 30px 30px; }
 
 .modal-header h4 {
-  color: #6d2f73;
+  color: #71325A;
   font-size: 30px; }
 
 .modal-body {
@@ -187,7 +193,7 @@ em {
   font-weight: 500; }
 
 .navbar li a, .navbar .navbar-brand {
-  color: #6d2f73 !important; }
+  color: #71325A !important; }
 
 .navbar-brand {
   font-family: 'Gentium Book Basic', serif !important; }
@@ -197,23 +203,23 @@ em {
 
 .navbar-nav li.active a {
   color: #fff9e6 !important;
-  background-color: #652c6d !important; }
+  background-color: #6a2f54 !important; }
 
 .navbar-default .navbar-toggle {
   border-color: transparent; }
 
 .open .dropdown-toggle {
   color: #fff9e6;
-  background-color: #652c6d !important; }
+  background-color: #6a2f54 !important; }
 
 .dropdown-menu li a {
   color: #664d00 !important; }
 
 .dropdown-menu li a:hover {
-  background-color: #652c6d !important; }
+  background-color: #6a2f54 !important; }
 
 footer {
-  background-color: #110712;
+  background-color: #12080E;
   color: #fff9e6;
   padding: 32px; }
 
