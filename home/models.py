@@ -28,7 +28,7 @@ class Gast(models.Model):
 
 class TicketReservation(models.Model):
     anrede = models.IntegerField(choices=ANREDE_CHOICES, default=1)
-    titel = models.CharField(max_length=15, default='')
+    titel = models.CharField(max_length=15, default='', blank=True)
     first_name = models.CharField(max_length=50, default='')
     last_name = models.CharField(max_length=50, default='')
     strasse = models.CharField(max_length=50, default='')
@@ -40,9 +40,11 @@ class TicketReservation(models.Model):
     tickets_schwanengesang = models.PositiveIntegerField(default=2)
     tickets_schwanengesang_erm = models.PositiveIntegerField(default=0)
     tickets_winterreise = models.PositiveIntegerField(default=2)
-    tickets_winterreise_erm = models.PositiveIntegerField(default=2)
+    tickets_winterreise_erm = models.PositiveIntegerField(default=0)
     tickets_quartettimkonzert = models.PositiveIntegerField(default=2)
-    tickets_quartettimkonzert_erm = models.PositiveIntegerField(default=2)
+    tickets_quartettimkonzert_erm = models.PositiveIntegerField(default=0)
+    tickets_summe = models.FloatField(null=True, blank=True, default=0.0)
+    nachricht = models.TextField(default='', blank=True)
     request_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):

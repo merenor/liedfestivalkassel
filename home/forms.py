@@ -24,10 +24,11 @@ class TicketReservationForm(forms.ModelForm):
             'tickets_winterreise',
             'tickets_winterreise_erm',
             'tickets_quartettimkonzert',
-            'tickets_quartettimkonzert_erm',)
+            'tickets_quartettimkonzert_erm',
+            'nachricht')
         labels = {
             'anrede': 'Anrede',
-            'titel': 'Titel',
+            'titel': 'Titel (falls vorhanden)',
             'first_name': 'Vorname',
             'last_name': 'Nachname',
             'strasse': 'Straße',
@@ -36,10 +37,4 @@ class TicketReservationForm(forms.ModelForm):
             'ort': 'Ort',
             'email': 'E-Mail',
             'tel': 'Telefon',
-            'tickets_schwanengesang': 'Karten für »Schwanengesang«',
-            'tickets_schwanengesang_erm': 'Karten für »Schwanengesang« (erm.)',
-            'tickets_winterreise': 'Karten für »Winterreise«',
-            'tickets_winterreise_erm': 'Karten für »Winterreise« (erm.)',
-            'tickets_quartettimkonzert': 'Karten für »Quartett im Konzert«',
-            'tickets_quartettimkonzert_erm': 'Karten für »Quartett im Konzert« (erm.)',
         }
