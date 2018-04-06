@@ -62,11 +62,11 @@ def karten(request):
                 [reservation.email]
             )
 
-            return render(request, 'home/karten.html', {'order_okay': True})
+            return render(request, 'home/karten_neu.html', {'order_okay': True})
     else:
         form = TicketReservationForm()
 
-    return render(request, 'home/karten.html', {'form': form})
+    return render(request, 'home/karten_neu.html', {'form': form})
 
 
 def favicon(request):

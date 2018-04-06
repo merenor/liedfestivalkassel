@@ -1,0 +1,77 @@
+{% include 'home/header.html' %}
+
+{% include 'home/navbar-simple.html' %}
+
+<div class="container">
+    <h3>Liedfestival Kassel 2018</h3>
+    <h4>Kartenvorbestellung</h4>
+
+    {% if order_okay %}
+    <p>Vielen Dank für Ihre Kartenbestellung!</p>
+    <p><a href="/">Zurück zur Hauptseite</a></p>
+    {% endif %}
+
+    {% if form %}
+    <p>Wir freuen uns über Ihr Interesse an den Konzerten im Rahmen des Liedfestivals Kassel.
+      Zur Kartenvorbestellung bitten wir Sie, nachfolgendes Formular auszufüllen. Nach einem Klick auf
+      "Karten bestellen" erhalten Sie eine umgehend eine Reservierungsbestätigung per E-Mail. Darüber hinaus
+      setzen wir uns persönlich mit Ihnen in Verbindung.</p>
+    <p>&nbsp;</p>
+    <div class="list-group">
+      <div class="list-group-item">
+        <form method="POST" class="post-form">{% csrf_token %}
+          {{ form.non_field_errors }}
+          {{ form.source.errors }}
+          {{ form.source }}
+
+          <div class="container-fluid">
+            <div>
+              <p><strong>Persönliche Daten</strong></p>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <p>{{ form.anrede.errors }}{{ form.anrede }}</p>
+                <p>{{ form.titel.errors }}{{ form.titel.label_tag }}<br />{{ form.titel }}</p>
+                <p>{{ form.first_name.errors }}{{ form.first_name.label_tag }}<br />{{ form.first_name }}</p>
+                <p>{{ form.last_name.errors }}{{ form.last_name.label_tag }}<br />{{ form.last_name }}</p>
+              </div>
+              <div class="col-lg-4">
+                <p>{{ form.strasse.errors }}{{ form.strasse.label_tag }}<br />{{ form.strasse }}</p>
+                <p>{{ form.hausnummer.errors }}{{ form.hausnummer.label_tag }}<br />{{ form.hausnummer }}</p>
+                <p>{{ form.plz.errors }}{{ form.plz.label_tag }}<br />{{ form.plz }}</p>
+                <p>{{ form.plz.errors }}{{ form.ort.label_tag }}<br />{{ form.ort }}</p>
+              </div>
+              <div class="col-lg-4">
+                <p>{{ form.tel.errors }}{{ form.tel.label_tag }}<br />{{ form.tel }}</p>
+                <p>{{ form.email.errors }}{{ form.email.label_tag }}<br />{{ form.email }}</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p><strong>Kartenwünsche</strong></p>
+          </div>
+          <div>
+            <p>Für das Konzert "Schwanengesang" möchte ich folgende Karten vorbestellen:</p>
+            <p>{{ form.tickets_schwanengesang }} Karten zum Normalpreis à 0,00 €</p>
+            <p>{{ form.tickets_schwanengesang_erm }} Karten zum ermäßigten Preis à 0,00 €</p>
+          </div>
+          <div>
+            <p>Für das Konzert "Winterreise" möchte ich folgende Karten vorbestellen:</p>
+            <p>{{ form.tickets_winterreise }} Karten zum Normalpreis à 0,00 €</p>
+            <p>{{ form.tickets_winterreise_erm }} Karten zum ermäßigten Preis à 0,00 €</p>
+          </div>
+          <div>
+            <p>Für das Konzert "Quartett im Konzert" möchte ich folgende Karten vorbestellen:</p>
+            <p>{{ form.tickets_quartettimkonzert }} Karten zum Normalpreis à 0,00 €</p>
+            <p>{{ form.tickets_quartettimkonzert_erm }} Karten zum ermäßigten Preis à 0,00 €</p>
+          </div>
+          <button type="submit" class="btn btn-margin-top">Karten bestellen</button>
+        </form>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
+
+{% include 'home/footer.html' %}
