@@ -106,7 +106,9 @@
           <h4>{{ artist.first_name }} {{ artist.last_name }}</h4>
           <p class="red">{{ artist.instrument }}</p>
         </div>
-        <div class="modal-body">{{ artist.bio|safe }}</div>
+        <div class="modal-body">
+          <img src="{{ artist.picture.url }}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="300" class="img-thumbnail" style="float: right; margin-left: 10px;">
+          {{ artist.bio|safe }}</div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-default pull-left" data-dismiss="modal">
             <span class="glyphicon glyphicon-remove"></span> Schließen
