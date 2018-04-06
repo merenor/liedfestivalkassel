@@ -1,5 +1,5 @@
 from django import forms
-from .models import TicketReservation
+from .models import TicketReservation, WorkshopReservation
 from .choices import *
 
 class TicketReservationForm(forms.ModelForm):
@@ -37,4 +37,37 @@ class TicketReservationForm(forms.ModelForm):
             'ort': 'Ort',
             'email': 'E-Mail',
             'tel': 'Telefon',
+        }
+
+class WorkshopReservationForm(forms.ModelForm):
+
+    class Meta:
+        model = WorkshopReservation
+
+        fields = ('anrede',
+            'titel',
+            'first_name',
+            'last_name',
+            'strasse',
+            'hausnummer',
+            'plz',
+            'ort',
+            'email',
+            'tel',
+            'alter',
+            'stimmfach')
+
+        labels = {
+            'anrede': 'Anrede',
+            'titel': 'Titel (falls vorhanden)',
+            'first_name': 'Vorname',
+            'last_name': 'Nachname',
+            'strasse': 'Straße',
+            'hausnummer': 'Hausnummer',
+            'plz': 'PLZ',
+            'ort': 'Ort',
+            'email': 'E-Mail',
+            'tel': 'Telefon',
+            'alter': 'Alter',
+            'stimmfach': 'Stimmfach'
         }

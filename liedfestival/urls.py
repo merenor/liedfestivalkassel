@@ -32,6 +32,7 @@ urlpatterns = [
     path('förderer/', views.letmesee, {'tag': 'foerderer'}),
     path('sponsoren/', views.letmesee, {'tag': 'foerderer'}),
     path('karten/', views.karten),
+    path('workshop-anmeldung/', views.workshop_anmeldung),
     #path('', TemplateView.as_view(template_name="home/base.html"))
     path('favicon.ico', views.favicon),
     path('', views.index),

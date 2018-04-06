@@ -9,7 +9,7 @@ from django.utils import timezone
 from django.template import Context, Template
 
 from .models import Artist, MailTemplate, Sponsor, Concert, Gast, Footer
-from .forms import TicketReservationForm
+from .forms import TicketReservationForm, WorkshopReservationForm
 
 
 # Create your views here.
@@ -67,6 +67,34 @@ def karten(request):
         form = TicketReservationForm()
 
     return render(request, 'home/karten_neu.html', {'form': form})
+
+
+@login_required(login_url='/login/')
+def workshop_anmeldung(request):
+
+    if request.method == "POST":
+        form = WorkshopReservationForm(request.POST)
+        if form.is_valid():
+            reservation = form.save(commit=False)
+            reservation.request_date = timezone.now()
+            reservation.save()
+
+            temp = MailTemplate.objects.get(name='workshop_bestaetigung')
+            t = Template(temp.text)
+            c = Context({"r":reservation})
+
+            res = send_mail(
+                temp.subject,
+                t.render(c),
+                "account@werthschulte.info",
+                [reservation.email]
+            )
+
+            return render(request, 'home/workshop_res.html', {'order_okay': True})
+    else:
+        form = WorkshopReservationForm()
+
+    return render(request, 'home/workshop_res.html', {'form': form})
 
 
 def favicon(request):

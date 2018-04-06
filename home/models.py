@@ -48,7 +48,29 @@ class TicketReservation(models.Model):
     request_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
-        return '{} - {} {}'.format(
+        return '{:%d.%m.%Y %H:%M} - {} {}'.format(
+            self.request_date,
+            self.first_name,
+            self.last_name
+        )
+
+
+class WorkshopReservation(models.Model):
+    anrede = models.IntegerField(choices=ANREDE_CHOICES, default=1)
+    titel = models.CharField(max_length=15, default='', blank=True)
+    first_name = models.CharField(max_length=50, default='')
+    last_name = models.CharField(max_length=50, default='')
+    strasse = models.CharField(max_length=50, default='')
+    hausnummer = models.CharField(max_length=4, default='')
+    plz = models.CharField(max_length=5, default='')
+    ort = models.CharField(max_length=50, default='')
+    email = models.EmailField()
+    tel = models.CharField(max_length=20, default='')
+    alter = models.PositiveIntegerField(default=None)
+    stimmfach = models.IntegerField(choices=STIMMFACH_CHOICES, default=1)
+
+    def __str__(self):
+        return '{:%d.%m.%Y %H:%M} - {} {}'.format(
             self.request_date,
             self.first_name,
             self.last_name

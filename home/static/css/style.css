@@ -8,7 +8,7 @@ body {
   -ms-hyphens: auto;
   hyphens: auto; }
 
-a {
+a, a:link, a:visited, a:hover {
   color: #71325A; }
 
 h3, h4, h5 {
