@@ -62,7 +62,7 @@ if "MAILJET_API_SECRET" in mysettings:
 
 ####
 
-ALLOWED_HOSTS = ['liedfestivalkassel.pythonanywhere.com', 'localhost', '192.168.2.108']
+ALLOWED_HOSTS = ['www.liedfestival-kassel.de', 'liedfestivalkassel.pythonanywhere.com', 'localhost', '192.168.2.108']
 
 
 # Application definition
