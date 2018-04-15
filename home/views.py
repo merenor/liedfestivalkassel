@@ -99,3 +99,7 @@ def workshop_anmeldung(request):
 
 def favicon(request):
     return redirect('/static/img/favicon.ico')
+
+
+def mailjet_verification(request):
+    return HttpResponse('')

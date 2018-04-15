@@ -13,11 +13,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 import json
 
-###########################
-DEBUG = True
-###########################
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +21,14 @@ with open(BASE_DIR + "/.mysettings", "r") as j:
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
+
+###########################
+if 'DEBUG' in mysettings:
+    DEBUG = mysettings['DEBUG']
+else:
+    DEBUG = True
+###########################
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 if 'SECRET_KEY' in mysettings:
