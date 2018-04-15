@@ -58,7 +58,7 @@ def karten(request):
             res = send_mail(
                 temp.subject,
                 t.render(c),
-                "account@werthschulte.info",
+                "Liedfestival Kassel <vorbestellung@liedfestival-kassel.de>",
                 [reservation.email]
             )
 
@@ -86,7 +86,7 @@ def workshop_anmeldung(request):
             res = send_mail(
                 temp.subject,
                 t.render(c),
-                "account@werthschulte.info",
+                "Liedfestival Kassel <workshop@liedfestival-kassel.de>",
                 [reservation.email]
             )
 
@@ -99,7 +99,3 @@ def workshop_anmeldung(request):
 
 def favicon(request):
     return redirect('/static/img/favicon.ico')
-
-
-def mailjet_verification(request):
-    return HttpResponse('')
