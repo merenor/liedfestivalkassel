@@ -58,7 +58,7 @@ def karten(request):
             res = send_mail(
                 temp.subject,
                 t.render(c),
-                "Liedfestival Kassel <vorbestellung@liedfestival-kassel.de>",
+                "vorbestellung@liedfestival-kassel.de",
                 [reservation.email]
             )
 
@@ -86,7 +86,7 @@ def workshop_anmeldung(request):
             res = send_mail(
                 temp.subject,
                 t.render(c),
-                "Liedfestival Kassel <workshop@liedfestival-kassel.de>",
+                "workshop@liedfestival-kassel.de",
                 [reservation.email]
             )
 
