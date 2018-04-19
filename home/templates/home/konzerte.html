@@ -7,33 +7,45 @@
     <!--<p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>-->
     <div class="list-group">
     {% for concert in concerts %}
-    <div class="list-group-item">
-      <p class="red" style="padding-bottom: 5px;">{{ concert.performance_date|date:"l, j. F Y, H"}} Uhr<br />Haus der Kirche, Kassel</p>
-      <h4 class="bg-1">»{{ concert.title }}«</h3>
-      <p>{{ concert.subtitle }}</p>
-      <p>{{ concert.text }}</p>
-    </div>
+      <div class="list-group-item">
+        <p class="red" style="padding-bottom: 5px;">{{ concert.performance_date|date:"l, j. F Y, H"}} Uhr<br />Haus der Kirche, Kassel</p>
+        <h4 class="bg-1">»{{ concert.title }}«</h3>
+          <p>{{ concert.subtitle }}</p>
+          <p>{{ concert.text }}</p>
+      </div>
     {% endfor %}
-<!--      <div class="list-group-item">
-        <p class="red" style="padding-bottom: 5px;">Dienstag, 12. Juni 2018, 20 Uhr<br />Haus der Kirche, Kassel</p>
-        <h4 class="bg-1">»Schwanengesang«</h3>
-        <p>Franz Schubert D 957</p>
-        <p>Lieder der Moderne von Alexander Zemlinsky, Arnold Schönberg und dem Kasseler Komponisten Jens Josef treten in einen spannenden Dialog mit Franz Schuberts letztem Liederzyklus. Es singt und spielt das <strong>piano.voce.ensemble</strong>.</p>
-      </div>
-      <div class="list-group-item">
-        <p class="red" style="padding-bottom: 5px;">Donnerstag, 14. Juni, 20 Uhr<br />Musikakademie der Stadt Kassel »Louis Spohr«</p>
-        <h4 class="bg-1">»Winterreise«</h3>
-        <p>Franz Schubert D 957</p>
-        <p>Daniel Holzhauser, der junge vielversprechende Bariton am Kasseler Staatstheater, interpretiert zusammen mit Michael Kravtchin Schuberts »Winterreise«. Dazu ein weiteres großes Werk aus Schuberts späterem Schaffen, die »Trockenen Blumen« aus »Die schöne Müllerin« D&nbsp;802 für Flöte und Klavier mit dem Kasseler Flötisten und Komponisten Jens Josef.</p>
-      </div>
-      <div class="list-group-item">
-        <p class="red" style="padding-bottom: 5px;">Samstag, 16. Juni, 20 Uhr</br>Ev. Kirche Kassel-Rothenditmold</p>
-        <h4 class="bg-1">»Quartett im Konzert«</h3>
-        <p>Johannes Brahms: Zigeunerlieder op. 103 und op. 112</p>
-        <p>Im abschließenden Ensemblekonzert steht das musikalische Schwergewicht Johannes Brahmes mit seinen mitreißenden »Zigeunerliedern« für vier Sänger und zwei Pianisten im Zentrum. Duette und Quartette von Haydn, Schubert und Fanny Hensel korrespondieren mit Brahms' schwungvollen Melodien. Es singt und spielt das piano.voce.ensemble.</p>
-      </div>-->
     </div>
     <button class="btn" name="Karten vorbestellen" onclick="location.href='karten/';">Karten vorbestellen</button>
+
+    <h3 class="text-center" style="padding-top: 1em">Weitere Veranstaltungen</h3>
+      <div class="list-group">
+      <div class="list-group-item">
+        <h4 class="bg-1">Workshop</h3>
+        <p>Auch diesmal bietet das <strong>piano.voce.ensemble</strong> Studenten und fortgeschrittenen Laien
+          die Möglichkeit, neue Impulse zur Entwicklung ihrer Stimme in Technik und Interpretation
+          zu erfahren. Die Sänger und Pianisten des <strong>piano.voce.ensembles</strong> arbeiten an zwei
+          aufeinanderfolgenden Tagen in unterschiedlichen Gruppierungen mit den Teilnehmern des
+          Workshops und gehen individuell auf deren Bedürfnisse ein. In einem Abschlusskonzert kann das
+          Erarbeitete zu Gehör gebracht werden.</p>
+        <p><a href="#workshop">Details zum Workshop</a></p>
+        </div>
+        <div class="list-group-item">
+          <h4 class="bg-1">Lied in der Schule</h3>
+          <p>Nicht zuletzt aufgrund des positiven Feedbacks geht das <strong>piano.voce.ensemble</strong> wieder in
+            die Schulen, damit Jugendliche das Lied und seine Interpreten ganz aus der Nähe erleben
+            können: Gesprächskonzerte mit Künstlern »zum Anfassen«, die spannend über das Lied, ihren
+            Zugang dazu und ihren Werdegang als Sänger oder Pianist berichten können.</p>
+        </div>
+        <div class="list-group-item">
+          <h4 class="bg-1"><span style="text-decoration: underline">Neu:</span> »Sing dein Lied«</h4>
+          <p class="red">Sonntag, 10. Juni 2018, 16 Uhr</p>
+          <p>Ein Liedernachmittag im Café: Jeder Lied-Fan kann sein Lieblingslied &ndash; ob Kunst-,
+            Volkslied oder Chanson &ndash; bei einer Tasse Kaffee zum Besten geben. Viele Menschen haben
+            Lieblingslieder. Alle, die gerne singen, sind eingeladen, ihr »Herzenslied« an einem
+            Nachmittag im Café in gemütlicher Runde vorzutragen. Das <strong>piano.voce.ensemble</strong> steuert dazu
+            Raum, Moderation und den begleitenden Pianisten bei.</p>
+        </div>
+      </div>
 </div>
 <!--
     <ul class="list-group">

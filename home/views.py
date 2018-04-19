@@ -55,11 +55,20 @@ def karten(request):
             t = Template(temp.text)
             c = Context({"r":reservation})
 
+            # Benachrichtigung an den Kunden
             res = send_mail(
                 temp.subject,
                 t.render(c),
                 "vorbestellung@liedfestival-kassel.de",
                 [reservation.email]
+            )
+
+            # interne Benachrichtigung
+            res = send_mail(
+                temp.subject,
+                t.render(c),
+                "vorbestellung@liedfestival-kassel.de",
+                ["felix@werthschulte.info"]
             )
 
             return render(request, 'home/karten_neu.html', {'order_okay': True})
@@ -83,11 +92,20 @@ def workshop_anmeldung(request):
             t = Template(temp.text)
             c = Context({"r":reservation})
 
+            # E-Mail an Kunden
             res = send_mail(
                 temp.subject,
                 t.render(c),
                 "workshop@liedfestival-kassel.de",
                 [reservation.email]
+            )
+
+            # interne E-Mail
+            res = send_mail(
+                temp.subject,
+                t.render(c),
+                "workshop@liedfestival-kassel.de",
+                ["felix@werthschulte.info"]
             )
 
             return render(request, 'home/workshop_res.html', {'order_okay': True})
@@ -97,5 +115,6 @@ def workshop_anmeldung(request):
     return render(request, 'home/workshop_res.html', {'form': form})
 
 
+# Redirect to Favicon at static file folder
 def favicon(request):
     return redirect('/static/img/favicon.ico')

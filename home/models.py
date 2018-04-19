@@ -68,6 +68,7 @@ class WorkshopReservation(models.Model):
     tel = models.CharField(max_length=20, default='')
     alter = models.PositiveIntegerField(default=None)
     stimmfach = models.IntegerField(choices=STIMMFACH_CHOICES, default=1)
+    ermaessigt = models.BooleanField(default=None)
 
     def __str__(self):
         return '{:%d.%m.%Y %H:%M} - {} {}'.format(

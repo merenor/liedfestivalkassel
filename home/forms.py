@@ -55,7 +55,8 @@ class WorkshopReservationForm(forms.ModelForm):
             'email',
             'tel',
             'alter',
-            'stimmfach')
+            'stimmfach',
+            'ermaessigt')
 
         labels = {
             'anrede': 'Anrede',
@@ -69,5 +70,6 @@ class WorkshopReservationForm(forms.ModelForm):
             'email': 'E-Mail',
             'tel': 'Telefon',
             'alter': 'Alter',
-            'stimmfach': 'Stimmfach'
+            'stimmfach': 'Stimmfach',
+            'ermaessigt': 'Schüler, Student'
         }

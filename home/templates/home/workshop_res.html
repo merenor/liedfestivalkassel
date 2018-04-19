@@ -7,13 +7,15 @@
     <h4>Anmeldung zum Workshop</h4>
 
     {% if order_okay %}
-    <p>Vielen Dank für Ihre Anmeldung!</p>
+    <p>Vielen Dank für Ihre Anmeldung! Bitte schauen Sie in Ihrem E-Mail-Postfach nach.</p>
+    <p>Sollten Sie innerhalb einiger Minuten keine E-Mail erhalten haben, setzen Sie sich bitte
+      <a href="mailto:workshop@liedfestival-kassel.de">per E-Mail</a> mit uns in Verbindung.</p>
     <p><a href="/">Zurück zur Hauptseite</a></p>
     {% endif %}
 
     {% if form %}
     <p>Wir freuen uns über Ihr Interesse am Workshop im Rahmen des Liedfestivals Kassel.
-      Zur Kartenvorbestellung bitten wir Sie, nachfolgendes Formular auszufüllen. Nach einem Klick auf
+      Zur Anmeldung bitten wir Sie, nachfolgendes Formular auszufüllen. Nach einem Klick auf
       "Anmeldung abschicken" erhalten Sie eine umgehend eine Bestätigung per E-Mail mit weiteren
       Informationen.</p>
     <p>&nbsp;</p>
@@ -44,8 +46,16 @@
               <div class="col-lg-4">
                 <p>{{ form.tel.errors }}{{ form.tel.label_tag }}<br />{{ form.tel }}</p>
                 <p>{{ form.email.errors }}{{ form.email.label_tag }}<br />{{ form.email }}</p>
+                <p>{{ form.alter.errors }}{{ form.alter.label_tag }}<br />{{ form.alter }}</p>
+                <p>{{ form.stimmfach.errors }}{{ form.stimmfach.label_tag }}<br />{{ form.stimmfach }}</p>
+                <p>{{ form.ermaessigt.errors }}{{ form.ermaessigt }} Schüler/in, Student/in</p>
               </div>
             </div>
+            <div class="row">
+              <div class="col-lg-8">
+              </div>
+            </div>
+          </div>
           <button type="submit" class="btn btn-margin-top">Anmeldung abschicken</button>
         </form>
       </div>
