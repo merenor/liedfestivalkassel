@@ -68,7 +68,7 @@ def karten(request):
                 temp.subject,
                 t.render(c),
                 "vorbestellung@liedfestival-kassel.de",
-                ["felix@werthschulte.info"]
+                ["m.kravtchin@liedfestival-kassel.de"]
             )
 
             return render(request, 'home/karten_neu.html', {'order_okay': True})
@@ -105,7 +105,7 @@ def workshop_anmeldung(request):
                 temp.subject,
                 t.render(c),
                 "workshop@liedfestival-kassel.de",
-                ["felix@werthschulte.info"]
+                ["t.schmaderer@liedfestival-kassel.de"]
             )
 
             return render(request, 'home/workshop_res.html', {'order_okay': True})
