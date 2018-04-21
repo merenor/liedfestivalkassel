@@ -14,7 +14,7 @@ from .forms import TicketReservationForm, WorkshopReservationForm
 
 # Create your views here.
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def index(request):
     artists = Artist.objects.all()
     gast = Gast.objects.filter()[:1].get()
@@ -35,13 +35,13 @@ def index(request):
     )
 
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def letmesee(request, tag):
 
     return redirect('/#{}'.format(tag))
 
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def karten(request):
 
     if request.method == "POST":
@@ -78,7 +78,7 @@ def karten(request):
     return render(request, 'home/karten_neu.html', {'form': form})
 
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def workshop_anmeldung(request):
 
     if request.method == "POST":
