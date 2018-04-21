@@ -220,11 +220,12 @@ em {
     border-color: transparent;
 }
 .open .dropdown-toggle {
-    color: $gelb_hell;
+    color: $gelb_hell !important;
     background-color: $lila_dunkel !important;
 }
 .dropdown-menu li a {
     color: $gelb_text !important;
+    letter-spacing: 1px;
 }
 .dropdown-menu li a:hover {
     background-color: $lila_dunkel !important;

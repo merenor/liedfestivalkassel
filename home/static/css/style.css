@@ -206,11 +206,12 @@ em {
   border-color: transparent; }
 
 .open .dropdown-toggle {
-  color: #fff9e6;
+  color: #fff9e6 !important;
   background-color: #6a2f54 !important; }
 
 .dropdown-menu li a {
-  color: #664d00 !important; }
+  color: #664d00 !important;
+  letter-spacing: 1px; }
 
 .dropdown-menu li a:hover {
   background-color: #6a2f54 !important; }
