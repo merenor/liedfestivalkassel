@@ -65,7 +65,7 @@ def karten(request):
 
             # interne Benachrichtigung
             res = send_mail(
-                "Kartenvorbestellung über Webseite {} {}".format(
+                "Kartenvorbestellung - {} {}".format(
                     reservation.first_name,
                     reservation.last_name
                 ),
