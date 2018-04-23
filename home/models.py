@@ -101,6 +101,7 @@ class Concert(models.Model):
     title = models.CharField(max_length=50, default='')
     subtitle = models.CharField(max_length=50, default='')
     text = models.TextField()
+    ticket_prices = models.CharField(max_length=20, default='')
 
     def __str__(self):
         return '{} - {}'.format(self.performance_date, self.title)
