@@ -65,7 +65,10 @@ def karten(request):
 
             # interne Benachrichtigung
             res = send_mail(
-                temp.subject,
+                "Kartenvorbestellung über Webseite: {} {}".format(
+                    temp.first_name,
+                    temp.last_name
+                ),
                 t.render(c),
                 "vorbestellung@liedfestival-kassel.de",
                 ["m.kravtchin@liedfestival-kassel.de"]
