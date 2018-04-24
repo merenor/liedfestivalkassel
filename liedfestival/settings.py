@@ -17,13 +17,13 @@ import json
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 with open(BASE_DIR + "/.mysettings", "r") as j:
-    mysettings = json.loads(j)
+    mysettings = json.load(j)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 ###########################
-DEBUG = True
+DEBUG = False
 ###########################
 
 
