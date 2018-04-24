@@ -7,7 +7,7 @@
     <h3 class="text-center">Als Gast</h3>
     <h4 class="text-center">{{ gast.name }}</h4>
     <div class="gast-bild"><img src="{{ gast.picture.url }}" width="350px" class="img-thumbnail" style="float:right; margin: 10px 20px 10px 10px;" /></div>
-    <div>{{ gast.bio|safe }}</div>
+    <div>{{ gast.bio|safe }}(Foto: {{ gast.photo_credit }})</div>
   </div>
 </div>
 {% endblock %}

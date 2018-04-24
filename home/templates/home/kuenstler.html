@@ -108,7 +108,7 @@
         </div>
         <div class="modal-body">
           <img src="{{ artist.picture.url }}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="300" class="img-thumbnail" style="float: right; margin-left: 10px;">
-          {{ artist.bio|safe }}</div>
+          {{ artist.bio|safe }}(Foto: {{ artist.photo_credit }})</div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-default pull-left" data-dismiss="modal">
             <span class="glyphicon glyphicon-remove"></span> Schließen

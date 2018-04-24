@@ -35,14 +35,14 @@ def index(request):
     )
 
 
-#@login_required(login_url='/login/')
 def letmesee(request, tag):
 
     return redirect('/#{}'.format(tag))
 
 
-#@login_required(login_url='/login/')
 def karten(request):
+
+    footer = Footer.objects.filter()[:1].get()
 
     if request.method == "POST":
         form = TicketReservationForm(request.POST)
@@ -74,15 +74,27 @@ def karten(request):
                 ["m.kravtchin@liedfestival-kassel.de"]
             )
 
-            return render(request, 'home/karten_neu.html', {'order_okay': True})
+            return render(request, 'home/karten_neu.html',
+                    {
+                        'order_okay': True,
+                        'footer': footer
+                    }
+                )
+
     else:
         form = TicketReservationForm()
 
-    return render(request, 'home/karten_neu.html', {'form': form})
+    return render(request, 'home/karten_neu.html',
+            {
+                'form': form,
+                'footer': footer
+            }
+        )
 
 
-#@login_required(login_url='/login/')
 def workshop_anmeldung(request):
+
+    footer = Footer.objects.filter()[:1].get()
 
     if request.method == "POST":
         form = WorkshopReservationForm(request.POST)
@@ -111,11 +123,21 @@ def workshop_anmeldung(request):
                 ["t.schmaderer@liedfestival-kassel.de"]
             )
 
-            return render(request, 'home/workshop_res.html', {'order_okay': True})
+            return render(request, 'home/workshop_res.html',
+                    {
+                        'order_okay': True,
+                        'footer': footer
+                    }
+                )
     else:
         form = WorkshopReservationForm()
 
-    return render(request, 'home/workshop_res.html', {'form': form})
+    return render(request, 'home/workshop_res.html',
+            {
+                'form': form,
+                'footer': footer
+            }
+        )
 
 
 # Redirect to Favicon at static file folder
