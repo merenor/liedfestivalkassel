@@ -23,10 +23,7 @@ with open(BASE_DIR + "/.mysettings", "r") as j:
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 ###########################
-if 'DEBUG' in mysettings:
-    DEBUG = mysettings['DEBUG']
-else:
-    DEBUG = True
+DEBUG = False
 ###########################
 
 
