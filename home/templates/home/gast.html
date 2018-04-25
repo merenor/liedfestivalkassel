@@ -1,13 +1,15 @@
 {% block kuenstler %}
 {% load static %}
 
-<!-- Container (Gast Section) -->
+<!-- Container (GAST Section) -->
 <div id="Gast">
   <div class="container">
     <h3 class="text-center">Als Gast</h3>
+    {% for gast in gaeste %}
     <h4 class="text-center">{{ gast.name }}</h4>
     <div class="gast-bild"><img src="{{ gast.picture.url }}" width="350px" class="img-thumbnail" style="float:right; margin: 10px 20px 10px 10px;" /></div>
-    <div>{{ gast.bio|safe }}(Foto: {{ gast.photo_credit }})</div>
+    <div>{{ gast.bio|safe }}<p>(Foto: {{ gast.photo_credit }})</p></div>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}

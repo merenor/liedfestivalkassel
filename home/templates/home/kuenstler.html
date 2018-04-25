@@ -1,7 +1,7 @@
 {% block kuenstler %}
 {% load static %}
 
-<!-- Container (Künstler Section) -->
+<!-- Container (KÜNSTLER Section) -->
 <div id="kuenstler">
   <div class="container">
     <h3 class="text-center">Künstler</h3>
@@ -19,85 +19,9 @@
         </div>
       </div>
     {% endfor %}
-
-<!--    <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/schmaderer_traudl2_4x3.jpg' %}" alt="Maren Engelhardt" width="400" height="300">
-          <h5>Traudl Schmaderer</h5>
-          <p class="instrument">Sopran</p>
-          <button class="btn" data-toggle="modal" data-target="#traudl">Biografie</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/engelhardt_maren_4x3.jpg' %}" alt="Maren Engelhardt" width="400" height="300">
-          <h5>Maren Engelhardt</h5>
-          <p class="instrument">Mezzosopran</p>
-          <button class="btn" data-toggle="modal" data-target="#maren">Biografie</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/holzhauser_daniel_4x3.jpg' %}" alt="Daniel Holzhauser" width="400" height="300">
-          <h5>Daniel Holzhauser</h5>
-          <p class="instrument">Bariton</p>
-          <button class="btn" data-toggle="modal" data-target="#daniel">Biografie</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/bertino_alberto_4x3.jpg' %}" alt="Alberto Bertino" width="400" height="300">
-          <h5>Alberto Bertino</h5>
-          <p class="instrument">Klavier</p>
-          <button class="btn" data-toggle="modal" data-target="#alberto">Biografie</button>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="{% static 'img/kravtchin_michael_4x3.jpg' %}" alt="Michael Kravtchin" width="400" height="300">
-          <h5>Michael Kravtchin</h5>
-          <p class="instrument">Klavier</p>
-          <button class="btn" data-toggle="modal" data-target="#michael">Biografie</button>
-        </div>
-      </div>
--->
-  </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many?">
-            </div>
-            <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-              <button type="submit" class="btn btn-block">Pay
-                <span class="glyphicon glyphicon-ok"></span>
-              </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
-          <p>Need <a href="#">help?</a></p>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- Modal -->
+
+<!-- Modal -->
   {% for artist in artists %}
   <div class="modal fade" id="{{ artist.pk }}" role="dialog">
     <div class="modal-dialog">

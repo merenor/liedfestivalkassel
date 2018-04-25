@@ -17,7 +17,7 @@ from .forms import TicketReservationForm, WorkshopReservationForm
 #@login_required(login_url='/login/')
 def index(request):
     artists = Artist.objects.all()
-    gast = Gast.objects.filter()[:1].get()
+    gaeste = Gast.objects.all()
     concerts = Concert.objects.order_by("performance_date")
     sponsors = Sponsor.objects.order_by("rang")
     footer = Footer.objects.filter()[:1].get()
@@ -28,7 +28,7 @@ def index(request):
         {
             'concerts': concerts,
             'artists': artists,
-            'gast': gast,
+            'gaeste': gaeste,
             'sponsors': sponsors,
             'footer': footer,
         }

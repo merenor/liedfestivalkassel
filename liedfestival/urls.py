@@ -36,5 +36,4 @@ urlpatterns = [
     #path('', TemplateView.as_view(template_name="home/base.html"))
     path('favicon.ico', views.favicon),
     path('', views.index),
-#] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
