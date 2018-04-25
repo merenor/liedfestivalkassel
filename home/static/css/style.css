@@ -1,5 +1,5 @@
 body {
-  font: 16px/1.75 'Open Sans', sans-serif;
+  font: 16px/1.75 'open_sansregular', sans-serif;
   color: #664d00;
   background-color: #fff9e6;
   -moz-hyphens: auto;
@@ -12,7 +12,7 @@ a, a:link, a:visited, a:hover {
   color: #71325A; }
 
 h3, h4, h5 {
-  font-family: 'Gentium Book Basic', serif;
+  font-family: 'gentium_book_basicregular', serif;
   color: #71325A;
   font-weight: 500; }
 
@@ -32,7 +32,7 @@ h5 {
   letter-spacing: 1px; }
 
 em {
-  font-family: 'Gentium Book Basic', serif;
+  font-family: 'gentium_book_basicregular', serif;
   font-style: normal;
   font-size: 19px;
   letter-spacing: 1px; }
@@ -180,7 +180,7 @@ em {
   color: #777; }
 
 .navbar {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'open_sansregular', sans-serif;
   margin-bottom: 0;
   background-color: #ffbf00;
   border: 0;
@@ -193,7 +193,7 @@ em {
   color: #71325A !important; }
 
 .navbar-brand {
-  font-family: 'Gentium Book Basic', serif !important; }
+  font-family: 'gentium_book_basicregular', serif !important; }
 
 .navbar-nav li a:hover {
   color: #fff9e6 !important; }

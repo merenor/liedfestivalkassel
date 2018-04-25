@@ -3,6 +3,8 @@
 <html lang="de">
 <head>
   <title>Liedfestival Kassel</title>
+
+  <!-- Meta -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name=”description” content="Das Liedfestival Kassel steht 2018 unter dem Motto 'Schwanengesang'.
@@ -11,14 +13,18 @@
   karten, tickets, pianovoceensemble, schmaderer, kravtchin, engelhardt, holzhauser, bertino, jenz,
   schubert, kunstlied, romantik, schwanengesang, winterreise, brahms, workshop">
   <meta name="generator" content="Python/Django">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet">
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="{% static 'bootstrap-3.3.7/js/bootstrap.min.js' %}"></script>-->
+  <!-- Fonts -->
+  <link href="{% static 'fonts/open-sans/stylesheet.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fonts/gentium/stylesheet.css' %}" rel="stylesheet" type="text/css">
+
+  <!-- JavaScript / JQuery -->
+  <script src="{% static 'jquery/3.3.1/jquery.min.js' %}"></script>
+  <script src="{% static 'bootstrap-3.3.7/js/bootstrap.min.js' %}"></script>
 
 </head>
 <body id="liedfestival" data-spy="scroll" data-target=".navbar" data-offset="50">
