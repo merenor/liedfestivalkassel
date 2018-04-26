@@ -7,7 +7,8 @@
     <div class="list-group">
     {% for concert in concerts %}
       <div class="list-group-item">
-        <p class="red" style="padding-bottom: 5px;">{{ concert.performance_date|date:"l, j. F Y, H"}} Uhr<br />Haus der Kirche, Kassel</p>
+        <p class="red" style="padding-bottom: 5px;">{{ concert.performance_date|date:"l, j. F Y, H"}}
+          Uhr<br />{{ concert.location }}</p>
         <h4 class="bg-1">»{{ concert.title }}«</h3>
           <p>{{ concert.subtitle }}</p>
           <p>{{ concert.text }}</p>
@@ -20,7 +21,7 @@
     <h3 class="text-center" style="padding-top: 1em">Weitere Veranstaltungen</h3>
       <div class="list-group">
       <div class="list-group-item">
-        <h4 class="bg-1">Workshop</h3>
+        <h4 class="bg-1">Workshop</h4>
         <p>Auch diesmal bietet das <strong>piano.voce.ensemble</strong> Studenten und fortgeschrittenen Laien
           die Möglichkeit, neue Impulse zur Entwicklung ihrer Stimme in Technik und Interpretation
           zu erfahren. Die Sänger und Pianisten des <strong>piano.voce.ensembles</strong> arbeiten an zwei
@@ -30,7 +31,7 @@
         <p><a href="#workshop">Details zum Workshop</a></p>
         </div>
         <div class="list-group-item">
-          <h4 class="bg-1">Lied in der Schule</h3>
+          <h4 class="bg-1">Lied in der Schule</h4>
           <p>Nicht zuletzt aufgrund des positiven Feedbacks geht das <strong>piano.voce.ensemble</strong> wieder in
             die Schulen, damit Jugendliche das Lied und seine Interpreten ganz aus der Nähe erleben
             können: Gesprächskonzerte mit Künstlern »zum Anfassen«, die spannend über das Lied, ihren
