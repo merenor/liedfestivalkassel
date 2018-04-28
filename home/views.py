@@ -143,3 +143,7 @@ def workshop_anmeldung(request):
 # Redirect to Favicon at static file folder
 def favicon(request):
     return redirect('/static/img/favicon.ico')
+
+
+def google(request):
+    return redirect('/static/google/googleba5118c5e56500e9.html')
