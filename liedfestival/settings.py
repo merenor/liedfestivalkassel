@@ -23,7 +23,11 @@ with open(BASE_DIR + "/.mysettings", "r") as j:
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 ###########################
-DEBUG = False
+if os.path.isfile('./liedfestival/.local'):
+    DEBUG = True
+    print("\nDEBUG = True\n")
+else:
+    DEBUG = False
 ###########################
 
 

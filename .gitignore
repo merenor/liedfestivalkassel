@@ -9,3 +9,4 @@ db.sqlite3
 .mysettings
 /home/static/img
 /home/static/media
+.local

@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import os.path
+
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.conf import settings
@@ -33,9 +35,10 @@ urlpatterns = [
     path('sponsoren/', views.letmesee, {'tag': 'foerderer'}),
     path('karten/', views.karten),
     path('workshop-anmeldung/', views.workshop_anmeldung),
-    #path('', TemplateView.as_view(template_name="home/base.html"))
     path('favicon.ico', views.favicon),
     path('googleba5118c5e56500e9.html', views.google),
-    path('', views.index),
-#] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', views.index)
 ]
+
+if os.path.isfile('./liedfestival/.local'):
+    urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
