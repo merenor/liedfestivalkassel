@@ -5,7 +5,7 @@
 <div id="kuenstler">
   <div class="container">
     <h3 class="text-center">Künstler</h3>
-    <p>Das <strong>piano.voce.ensemble</strong> besteht aus drei Sänger/innen und zwei Pianisten, die schon oft miteinander in unterschiedlichen Konzerten aufgetreten sind – sei es am Kasseler Staatstheater oder auch auf internationalen Konzertpodien. Neu an der Kooperation im Rahmen des <em>Liedfestivals Kassel</em> ist die kammermusikalische Ausrichtung des 2015 gegründeten Ensembles, welche die Grenzen eines Liederabends im herkömmlichen Sinne hinter sich lässt.</p>
+    <p>Das <strong>piano.voce.ensemble</strong> besteht aus Sänger/innen und Instrumentalist/innen, die schon oft miteinander in unterschiedlichen Konzerten aufgetreten sind – sei es am Kasseler Staatstheater oder auch auf internationalen Konzertpodien. Neu an der Kooperation im Rahmen des <em>Liedfestivals Kassel</em> ist die kammermusikalische Ausrichtung des 2015 gegründeten Ensembles, welche die Grenzen eines Liederabends im herkömmlichen Sinne hinter sich lässt.</p>
     <p>Die Künstlerinnen und Künstler vereint eine große Liebe zum Liedgesang, die den Wunsch reifen ließ, sowohl die großen Liedzyklen wie etwa die Winterreise von Franz Schubert oder die Dichterliebe und den Liederkreis von Robert Schumann neu zu hören und gemeinsam aufzuführen, als auch sich den oft zu Unrecht vernachlässigten Duetten, Terzetten und Quartetten der Klassik und Romantik zu widmen.</p>
 
     <div class="row text-center" id="kuenstlerliste">
@@ -32,7 +32,7 @@
         </div>
         <div class="modal-body">
           <img src="{{ artist.picture.url }}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="300" class="img-thumbnail" style="float: right; margin-left: 10px;">
-          {{ artist.bio|safe }}(Foto: {{ artist.photo_credit }})</div>
+          {{ artist.bio|safe }} (Foto: {{ artist.photo_credit }})</div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-default pull-left" data-dismiss="modal">
             <span class="glyphicon glyphicon-remove"></span> Schließen

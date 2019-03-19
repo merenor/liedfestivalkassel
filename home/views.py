@@ -16,7 +16,8 @@ from .forms import TicketReservationForm, WorkshopReservationForm
 
 #@login_required(login_url='/login/')
 def index(request):
-    artists = Artist.objects.all()
+    #artists = Artist.objects.all()
+    artists = Artist.objects.order_by("rang")
     gaeste = Gast.objects.all()
     concerts = Concert.objects.order_by("performance_date")
     sponsors = Sponsor.objects.order_by("rang")

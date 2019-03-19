@@ -2,13 +2,13 @@
 {% load static %}
 
 <!-- Container (GAST Section) -->
-<div id="Gast">
+<div id="gaeste">
   <div class="container">
-    <h3 class="text-center">Als Gast</h3>
+    <h3 class="text-center">Als Gäste</h3>
     {% for gast in gaeste %}
     <h4 class="text-center">{{ gast.name }}</h4>
     <div class="gast-bild"><img src="{{ gast.picture.url }}" width="350px" class="img-thumbnail" style="float:right; margin: 10px 20px 10px 10px;" /></div>
-    <div>{{ gast.bio|safe }}<p>(Foto: {{ gast.photo_credit }})</p></div>
+    <div>{{ gast.bio|safe }}<p style="padding-bottom: 1em;">(Foto: {{ gast.photo_credit }})</p></div>
     {% endfor %}
   </div>
 </div>
