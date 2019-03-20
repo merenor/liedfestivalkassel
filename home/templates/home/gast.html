@@ -6,9 +6,17 @@
   <div class="container">
     <h3 class="text-center">Als Gäste</h3>
     {% for gast in gaeste %}
-    <h4 class="text-center">{{ gast.name }}</h4>
-    <div class="gast-bild"><img src="{{ gast.picture.url }}" width="350px" class="img-thumbnail" style="float:right; margin: 10px 20px 10px 10px;" /></div>
-    <div>{{ gast.bio|safe }}<p style="padding-bottom: 1em;">(Foto: {{ gast.photo_credit }})</p></div>
+    <h4 class="text-center">
+      {{ gast.first_name }} {{ gast.last_name }}{% if gast.instrument %}, {{ gast.instrument }}{% endif %}</h4>
+    {% if gast.picture %}
+    <div class="gast-bild"><img src="{{ gast.picture.url }}"
+       width="350px"class="img-thumbnail"
+       style="float:right; margin: 10px 20px 10px 10px;"
+       alt="{{ gast.first_name }} {{ gast.last_name }}" />
+    </div>
+    {% endif %}
+    <div>{{ gast.bio|safe }}<p style="padding-bottom: 1em;">(Foto:
+      {{ gast.photo_credit }})</p></div>
     {% endfor %}
   </div>
 </div>

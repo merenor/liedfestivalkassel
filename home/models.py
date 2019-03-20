@@ -3,14 +3,15 @@ from .choices import *
 
 # Create your models here.
 class Artist(models.Model):
-    rang = models.PositiveIntegerField(default=0)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    instrument = models.CharField(max_length=50, default='')
-    email = models.EmailField()
-    bio = models.TextField()
-    picture = models.ImageField(upload_to='img/artists/')
-    photo_credit = models.CharField(max_length=100, default='')
+    rang = models.PositiveIntegerField(default=0, blank=True, null=True)
+    first_name = models.CharField(max_length=50, blank=True, null=True)
+    last_name = models.CharField(max_length=50, blank=True, null=True)
+    instrument = models.CharField(max_length=50, default='', blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    bio = models.TextField(blank=True, null=True)
+    picture = models.ImageField(upload_to='img/artists/', blank=True, null=True)
+    photo_credit = models.CharField(max_length=100, default='', blank=True, null=True)
+    group = models.CharField(max_length=100, default='pve', blank=True, null=True)
 
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
@@ -44,6 +45,42 @@ class TicketReservation(models.Model):
     tickets_quartettimkonzert = models.PositiveIntegerField(default=2)
     tickets_quartettimkonzert_erm = models.PositiveIntegerField(default=0)
     tickets_summe = models.FloatField(null=True, blank=True, default=0.0)
+    nachricht = models.TextField(default='', blank=True)
+    request_date = models.DateTimeField(blank=True, null=True)
+
+    def __str__(self):
+        return '{:%d.%m.%Y %H:%M} - {} {}'.format(
+            self.request_date,
+            self.first_name,
+            self.last_name
+        )
+
+
+class TicketReservation2019(models.Model):
+    anrede = models.IntegerField(choices=ANREDE_CHOICES, default=1)
+    titel = models.CharField(max_length=15, default='', blank=True)
+    first_name = models.CharField(max_length=50, default='')
+    last_name = models.CharField(max_length=50, default='')
+    strasse = models.CharField(max_length=50, default='')
+    hausnummer = models.CharField(max_length=4, default='')
+    plz = models.CharField(max_length=5, default='')
+    ort = models.CharField(max_length=50, default='')
+    email = models.EmailField()
+    tel = models.CharField(max_length=20, default='', blank=True)
+
+    tickets_gesamtpaket = models.PositiveIntegerField(default=0)
+    tickets_eroeffnung = models.PositiveIntegerField(default=2)
+    tickets_eroeffnung_erm = models.PositiveIntegerField(default=0)
+    tickets_romanzen = models.PositiveIntegerField(default=2)
+    tickets_romanzen_erm = models.PositiveIntegerField(default=0)
+    tickets_jungeslied = models.PositiveIntegerField(default=2)
+    tickets_jungeslied_erm = models.PositiveIntegerField(default=0)
+    tickets_melodies = models.PositiveIntegerField(default=2)
+    tickets_melodies_erm = models.PositiveIntegerField(default=0)
+    tickets_abschluss = models.PositiveIntegerField(default=2)
+    tickets_abschluss_erm = models.PositiveIntegerField(default=0)
+    tickets_summe = models.FloatField(null=True, blank=True, default=0.0)
+
     nachricht = models.TextField(default='', blank=True)
     request_date = models.DateTimeField(blank=True, null=True)
 

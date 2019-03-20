@@ -9,7 +9,7 @@ from django.utils import timezone
 from django.template import Context, Template
 
 from .models import Artist, MailTemplate, Sponsor, Concert, Gast, Footer
-from .forms import TicketReservationForm, WorkshopReservationForm
+from .forms import TicketReservationForm, TicketReservation2019Form, WorkshopReservationForm
 
 
 # Create your views here.
@@ -17,8 +17,10 @@ from .forms import TicketReservationForm, WorkshopReservationForm
 #@login_required(login_url='/login/')
 def index(request):
     #artists = Artist.objects.all()
-    artists = Artist.objects.order_by("rang")
-    gaeste = Gast.objects.all()
+    artists = Artist.objects.filter(group="pve").order_by("rang")
+    #gaeste = Gast.objects.all()
+    gaeste = Artist.objects.filter(group="gast").order_by("rang")
+    youngsters = Artist.objects.filter(group="youngster").order_by("rang")
     concerts = Concert.objects.order_by("performance_date")
     sponsors = Sponsor.objects.order_by("rang")
     footer = Footer.objects.filter()[:1].get()
@@ -30,6 +32,7 @@ def index(request):
             'concerts': concerts,
             'artists': artists,
             'gaeste': gaeste,
+            'youngsters': youngsters,
             'sponsors': sponsors,
             'footer': footer,
         }
@@ -46,13 +49,13 @@ def karten(request):
     footer = Footer.objects.filter()[:1].get()
 
     if request.method == "POST":
-        form = TicketReservationForm(request.POST)
+        form = TicketReservation2019Form(request.POST)
         if form.is_valid():
             reservation = form.save(commit=False)
             reservation.request_date = timezone.now()
             reservation.save()
 
-            temp = MailTemplate.objects.get(name='karten_bestaetigung')
+            temp = MailTemplate.objects.get(name='karten_bestaetigung_2019')
             t = Template(temp.text)
             c = Context({"r":reservation})
 
@@ -72,7 +75,9 @@ def karten(request):
                 ),
                 t.render(c),
                 "vorbestellung@liedfestival-kassel.de",
-                ["m.kravtchin@liedfestival-kassel.de"]
+                #['felix@werthschulte.info']
+                ["m.kravtchin@liedfestival-kassel.de",
+                "t.schmaderer@liedfestival-kassel.de"]
             )
 
             return render(request, 'home/karten_neu.html',
@@ -83,7 +88,7 @@ def karten(request):
                 )
 
     else:
-        form = TicketReservationForm()
+        form = TicketReservation2019Form()
 
     return render(request, 'home/karten_neu.html',
             {

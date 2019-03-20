@@ -2,9 +2,9 @@
 {% load static %}
 
 <!-- Container (KÜNSTLER Section) -->
-<div id="kuenstler">
+<div id="pianovoceensemble">
   <div class="container">
-    <h3 class="text-center">Künstler</h3>
+    <h3 class="text-center">Das piano.voce.ensemble</h3>
     <p>Das <strong>piano.voce.ensemble</strong> besteht aus Sänger/innen und Instrumentalist/innen, die schon oft miteinander in unterschiedlichen Konzerten aufgetreten sind – sei es am Kasseler Staatstheater oder auch auf internationalen Konzertpodien. Neu an der Kooperation im Rahmen des <em>Liedfestivals Kassel</em> ist die kammermusikalische Ausrichtung des 2015 gegründeten Ensembles, welche die Grenzen eines Liederabends im herkömmlichen Sinne hinter sich lässt.</p>
     <p>Die Künstlerinnen und Künstler vereint eine große Liebe zum Liedgesang, die den Wunsch reifen ließ, sowohl die großen Liedzyklen wie etwa die Winterreise von Franz Schubert oder die Dichterliebe und den Liederkreis von Robert Schumann neu zu hören und gemeinsam aufzuführen, als auch sich den oft zu Unrecht vernachlässigten Duetten, Terzetten und Quartetten der Klassik und Romantik zu widmen.</p>
 
@@ -12,7 +12,7 @@
     {% for artist in artists %}
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="{{ artist.picture.url }}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="400">
+          <img src="{% if artist.picture %}{{ artist.picture.url }}{% endif %}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="400">
           <h5>{{ artist.first_name }} {{ artist.last_name }}</h5>
           <p class="instrument">{{ artist.instrument }}</p>
           <button class="btn" data-toggle="modal" data-target="#{{ artist.pk }}">Biografie</button>
@@ -31,7 +31,7 @@
           <p class="red">{{ artist.instrument }}</p>
         </div>
         <div class="modal-body">
-          <img src="{{ artist.picture.url }}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="300" class="img-thumbnail" style="float: right; margin-left: 10px;">
+          <img src="{% if artist.picture %}{{ artist.picture.url }}{% endif %}" alt="{{ artist.first_name }} {{ artist.last_name }}" width="300" class="img-thumbnail" style="float: right; margin-left: 10px;">
           {{ artist.bio|safe }} (Foto: {{ artist.photo_credit }})</div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-default pull-left" data-dismiss="modal">

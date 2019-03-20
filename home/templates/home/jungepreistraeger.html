@@ -1,0 +1,46 @@
+{% block kuenstler %}
+{% load static %}
+
+<!-- Container (KÜNSTLER Section) -->
+<div id="jungepreistraeger">
+  <div class="container">
+    <h3 class="text-center">Junge Preisträger</h3>
+
+    <div class="row text-center" id="jungepreistraegerliste">
+    {% for youngster in youngsters %}
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="{% if youngster.picture %}{{ youngster.picture.url }}{% endif %}" alt="{{ youngster.first_name }} {{ youngster.last_name }}" width="400">
+          <h5>{{ youngster.first_name }} {{ youngster.last_name }}</h5>
+          <p class="instrument">{{ youngster.instrument }}</p>
+          <button class="btn" data-toggle="modal" data-target="#{{ youngster.pk }}">Biografie</button>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+
+<!-- Modal -->
+  {% for youngster in youngsters %}
+  <div class="modal fade" id="{{ youngster.pk }}" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>{{ youngster.first_name }} {{ youngster.last_name }}</h4>
+          <p class="red">{{ youngster.instrument }}</p>
+        </div>
+        <div class="modal-body">
+          <img src="{% if youngster.picture %}{{ youngster.picture.url }}{% endif %}" alt="{{ youngster.first_name }} {{ youngster.last_name }}" width="300" class="img-thumbnail" style="float: right; margin-left: 10px;">
+          {{ youngster.bio|safe }} (Foto: {{ youngster.photo_credit }})</div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Schließen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+</div>
+{% endblock %}
