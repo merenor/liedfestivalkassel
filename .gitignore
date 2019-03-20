@@ -10,3 +10,4 @@ db.sqlite3
 /home/static/img
 /home/static/media
 .local
+/sql-dumps
