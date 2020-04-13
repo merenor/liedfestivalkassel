@@ -333,7 +333,7 @@ regex==2017.2.8
 remix==2.4.0
 reportlab==3.3.0
 repoze.lru==0.6
-requests==2.10.0
+requests==2.20.0
 requests-cache==0.4.12
 requests-oauthlib==0.6.2
 resolver-test==1.3
